@@ -1,13 +1,14 @@
+import time
+start = time.time()
 
-increment = 0
-ans = 1
-num = 1
-for time in range(0,500):
-    increment = increment + 2
-    if time % 10 ==0:
-        print(time)
-    for n in range(0,4):
-        num = num + increment
-        ans = ans + num
-   
+increment, ans, num = 0, 1, 1
+while increment < 1000 :
+    increment += 2
+    for n in xrange(4):
+        num += increment
+        ans += num
 print(ans)
+
+print(time.time() - start)
+
+#669171001
